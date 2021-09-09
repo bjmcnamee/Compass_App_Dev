@@ -4,10 +4,8 @@
 #### - Content API/Scraping collection and cleaning via Python ETL tools
 #### - hosted on hosting provider VPS, managed through WHM and cPanel
 #### - 561K+ drug-drug interactions, 766 drugs
-####
-####
-<b>compassmedicine.com</b>
 
+<b>compassmedicine.com</b>
 ![Website](/Screenshots/01.jpg)
 ![Secure Login](/Screenshots/02.jpg)
 
