@@ -11,18 +11,18 @@ if (!isset($_SESSION['loggedin'])) {
 $showhelp = 1;
 $shortbar = "<hr style='width:40%;text-align:left;margin-left:0'>";
 $urlroot = "https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&searchTerm=";
-$ctrlf = "<img src='../img/ctrlf.png' title='alert level : severe' height='25'>";
-$red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
-$orange = "<img src='../img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
-$green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
-$one = "<img src='../img/one.png' width='20' height='20'>";
-$two = "<img src='../img/two.png' width='20' height='20'>";
-$three = "<img src='../img/three.png' width='20' height='20'>";
-$four = "<img src='../img/four.png' width='20' height='20'>";
-$rx_icon = "<img src='../img/rx_icon.png' title='NLM RxNorm' height='15'>";
-$dm_icon = "<img src='../img/dailymed_icon.png' title='NLM DailyMed' height='12'>";
-$db_icon = "<img src='../img/drugbank_icon.png' title='DrugBank' height='15'>";
-$atc_icon = "<img src='../img/atc_icon.png' title='ATC' height='15'>";
+$ctrlf = "<img src='../assets/img/ctrlf.png' title='alert level : severe' height='25'>";
+$red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+$orange = "<img src='../assets/img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
+$green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+$one = "<img src='../assets/img/one.png' width='20' height='20'>";
+$two = "<img src='../assets/img/two.png' width='20' height='20'>";
+$three = "<img src='../assets/img/three.png' width='20' height='20'>";
+$four = "<img src='../assets/img/four.png' width='20' height='20'>";
+$rx_icon = "<img src='../assets/img/rx_icon.png' title='NLM RxNorm' height='15'>";
+$dm_icon = "<img src='../assets/img/dailymed_icon.png' title='NLM DailyMed' height='12'>";
+$db_icon = "<img src='../assets/img/drugbank_icon.png' title='DrugBank' height='15'>";
+$atc_icon = "<img src='../assets/img/atc_icon.png' title='ATC' height='15'>";
 $help1 = "HOW IT WORKS<span style='color:#212021;font-weight:normal'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSearch for drug interactions with other drugs, disease or gene variants + bespoke drug and disease alerts<br><br><b>General Search</b><br>Note : Client details not required for a general search<br>1. Select any drug combination - at least two for drug-drug interaction<br>2. Select any disease combination - at least one for drug-disease combinations<br>3. click <button type='button' disabled>Find Interactions</button><br><br><b>Find existing client</b><br> 1. Enter HBT ID, eg 10000, 10001, etc<br>2. Click <button type='button' disabled>Find</button> to find client record<br>3. Click on 'Client' tab below to view client record<br><br><b>Add new client</b><br>1. Enter HBT ID<br>2. Create Baseline for client record - select sex, age, drugs and diseases, and add notes if required<br>3. Click <button type='button' disabled>Add</button> to add new client profile<br><br><b>Update existing client</b><br>1. Find client as above<br>2. Create Follow Up for client record - select new/changed drugs and diseases, and add notes if required<br>3. Click <button type='button' disabled>Update</button> to update client profile<br>4. View changes in 'Client' tab<br><br>Click <button type='button' disabled>CLS</button> to clear previous selections</span>";
 $sex = array('Male','Female');
 $age = array('0 to 10','11 to 20','21 to 30','31 to 40','41 to 50','51 to 60','71 to 80','81 to 90','91 to 100', '100+');
@@ -71,8 +71,8 @@ function &findClient($hbtid){
     return $a_client;}
 
 function &addClient($client){
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
     $conn = connectSQLdb();
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "INSERT INTO `clients` (hbtid, drug01, drug02, drug03, drug04, drug05, drug06, drug07, drug08, drug09, drug10, drug11, drug12, disease01, disease02, disease03, disease04, disease05, disease06, status,  sex, age, allergies, exercise, alcohol, smoking, height1, height2, weight1, weight2, bmi, history) VALUES ('$client[0]', '$client[1]', '$client[2]', '$client[3]', '$client[4]', '$client[5]', '$client[6]', '$client[7]', '$client[8]', '$client[9]', '$client[10]', '$client[11]', '$client[12]', '$client[21]', '$client[22]', '$client[23]', '$client[24]', '$client[25]', '$client[26]', '$client[40]', '$client[41]', '$client[42]','$client[43]', '$client[44]', '$client[45]', '$client[46]', '$client[47]', '$client[48]', '$client[49]', '$client[50]', '$client[51]', '$client[52]')";
@@ -85,8 +85,8 @@ function &addClient($client){
     return $client;}
 
 function &updateClient($client){
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
     $conn = connectSQLdb();
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "UPDATE `clients` set drug01='$client[1]', drug02='$client[2]', drug03='$client[3]', drug04='$client[4]', drug05='$client[5]', drug06='$client[6]', drug07='$client[7]', drug08='$client[8]', drug09='$client[9]', drug10='$client[10]', drug11='$client[11]', drug12='$client[12]', disease01='$client[21]', disease02='$client[22]', disease03='$client[23]', disease04='$client[24]', disease05='$client[25]',
@@ -133,10 +133,10 @@ function &getRxCode($drug){
 
 function &getDrugSourceIds($drug){
     $conn = connectSQLdb();
-    $rx_icon = "<img src='../img/rx_icon.png' title='National Library Medicine RxNorm' height='15'>";
-    $dm_icon = "<img src='../img/dailymed_icon.png' title='National Library Medicine DailyMed' height='12'>";
-    $db_icon = "<img src='../img/drugbank_icon.png' title='DrugBank' height='15'>";
-    $atc_icon = "<img src='../img/atc_icon.png' title='World Health Organisation' height='15'>";
+    $rx_icon = "<img src='../assets/img/rx_icon.png' title='National Library Medicine RxNorm' height='15'>";
+    $dm_icon = "<img src='../assets/img/dailymed_icon.png' title='National Library Medicine DailyMed' height='12'>";
+    $db_icon = "<img src='../assets/img/drugbank_icon.png' title='DrugBank' height='15'>";
+    $atc_icon = "<img src='../assets/img/atc_icon.png' title='World Health Organisation' height='15'>";
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "SELECT * FROM `drug_codes` WHERE drug = '$drug'";
     $sqlquery = $conn->query($sql);
@@ -154,9 +154,9 @@ function &getDrugSourceIds($drug){
     return $lines;}
 
 function &getDrugAlerts($rx){
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
-    $orange = "<img src='../img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $orange = "<img src='../assets/img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
     $conn = connectSQLdb();
     $drug_alert = '0 results';$colour='';
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
@@ -171,7 +171,7 @@ function &getDrugAlerts($rx){
     return $drug_alert;}
 
 function &getDailyMedPage($spl){
-    $dm_icon = "<img src='../img/dailymed_icon.png' title='NLM DailyMed' width='20'>";
+    $dm_icon = "<img src='../assets/img/dailymed_icon.png' title='NLM DailyMed' width='20'>";
     $dailymed =  "<br>".$dm_icon." <b>DailyMed Drug-Drug Interactions (General/Summary)</b>";
     $conn = connectSQLdb();
     $sql = "SELECT * FROM `dailymed` WHERE spl = '$spl'";
@@ -184,7 +184,7 @@ function &getDailyMedPage($spl){
     return $dailymed;}
 
 function &getDrugbankPage($drugbank_id){
-    $db_icon = "<img src='../img/drugbank_icon.png' title='DrugBank' width='15'>";
+    $db_icon = "<img src='../assets/img/drugbank_icon.png' title='DrugBank' width='15'>";
     $drugbank = "<br>".$db_icon." <b>Drugbank Drug Detailed Report</b>";
     $conn = connectSQLdb();
     $sql = "SELECT * FROM `drugbank` WHERE drugbank = '$drugbank_id'";
@@ -209,9 +209,9 @@ function &getAllDrugDrugInteractions($rx){
 
 function &getSelectDrugDrugInteraction($rx,$i_rx){
     $interaction = array(0,0,0,0,0);
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
-    $orange = "<img src='../img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $orange = "<img src='../assets/img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
     $conn = connectSQLdb();
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "SELECT * FROM `drug_interactions` WHERE rxcui = '$rx' AND i_rxcui = '$i_rx'";
@@ -234,9 +234,9 @@ function &getDiseaseCode($disease){
 
 function &getDiseaseInteractions($rx,$icd){
     $interaction = array(0,0,0,0,0,0,0);
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
-    $orange = "<img src='../img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $orange = "<img src='../assets/img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
     $conn = connectSQLdb();
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "SELECT * FROM `dis_interactions` WHERE icd = '$icd' AND rxcui = '$rx'";
@@ -249,9 +249,9 @@ function &getDiseaseInteractions($rx,$icd){
 function &getGeneInteractions($drug){
     $gvalert = "0 results";
     $conn = connectSQLdb();
-    $red = "<img src='../img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
-    $orange = "<img src='../img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
-    $green = "<img src='../img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
+    $red = "<img src='../assets/img/red.png' title='alert level : severe' width='10' height='10'>&nbsp";
+    $orange = "<img src='../assets/img/orange.png' title='alert level : moderate' width='10' height='10'>&nbsp";
+    $green = "<img src='../assets/img/green.png' title='alert level : minor' width='10' height='10'>&nbsp";
     if ($conn->connect_error) {die("Connection failed: " . $conn->connect_error);}
     $sql = "SELECT * FROM `gene_interactions` WHERE drug = '$drug'";
     $sqlquery = $conn->query($sql);
@@ -294,7 +294,7 @@ function &getDiseaseGuide($disease) {
     <div>
         <h1>Compass Interactions Database Prototype v<?php echo $_SESSION['phpversion']; ?></h1>
         <a style="color:#c1c4c8"><?php echo $_SESSION['fullname'] ?></a>
-        <a href="../../logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <a href="../login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
 </nav>
 <form enctype="multipart/form-data" action="" method="post">

@@ -393,7 +393,7 @@ if ( (isset($_POST['find'])) || (isset($_POST['update'])) || (isset($_POST['add'
         <div>
             <h1>Compass Interactions Database Prototype v<?php echo $_SESSION['phpversion']; ?></h1>
             <a style="color:#c1c4c8"><?php echo $_SESSION['fullname']; ?></a> # user name
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a> # logout link
+            <a href="login/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a> # logout link
         </div>
     </nav>
 
