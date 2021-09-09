@@ -6,23 +6,23 @@
 #### - 561K+ drug-drug interactions, 766 drugs
 ####
 <b>compassmedicine.com</b><br>
-![Website](/Screenshots/01.jpg)
-![Secure Login](/Screenshots/02.jpg)
+![Website](/assets/Screenshots/01.jpg)
+![Secure Login](/assets/Screenshots/02.jpg)
 
 <b>Welcome Screen</b>
-![Welcome Screen](/Screenshots/03.jpg)
+![Welcome Screen](/assets/Screenshots/03.jpg)
 
 <b>Example Client - Client data entry / search, Drug/Disease data entry / search, Summary, and Tabs</b>
-![Example Client](/Screenshots/04.jpg)
+![Example Client](/assets/Screenshots/04.jpg)
 
 <b>Client Tab - records history/log of changes</b>
-![Client History](/Screenshots/05.jpg)
+![Client History](/assets/Screenshots/05.jpg)
 
 <b>Drug Tab - full drug profile including interactions</b>
-![Drug Detail Tab](/Screenshots/06.jpg)
+![Drug Detail Tab](/assets/Screenshots/06.jpg)
 
 <b>Disease Tab - basic disease information</b>
-![Disease Detail Tab](/Screenshots/07.jpg)
+![Disease Detail Tab](/assets/Screenshots/07.jpg)
 
 <b>Database Design</b>
-![MySQL Database Design](/Screenshots/10.jpg)
+![MySQL Database Design](/assets/Screenshots/10.jpg)
