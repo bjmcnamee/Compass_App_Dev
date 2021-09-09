@@ -12,17 +12,17 @@
 <b>Welcome Screen</b>
 ![Welcome Screen](/Screenshots/03.jpg)
 
-<b>Example Client - Summary and Tabs</b>
+<b>Example Client - Client data entry / search, Drug/Disease data entry / search, Summary, and Tabs</b>
 ![Example Client](/Screenshots/04.jpg)
 
-<b>Client History Tab</b>
+<b>Client Tab - records history/log of changes</b>
 ![Client History](/Screenshots/05.jpg)
 
-<b>Drug Detail Tab</b>
+<b>Drug Tab - full drug profile including interactions</b>
 ![Drug Detail Tab](/Screenshots/06.jpg)
 
-<b>Disease Detail Tab</b>
+<b>Disease Tab - basic disease information</b>
 ![Disease Detail Tab](/Screenshots/07.jpg)
 
-<b>MySQL Database Design</b>
+<b>Database Design</b>
 ![MySQL Database Design](/Screenshots/10.jpg)
