@@ -1,0 +1,14 @@
+VERSION CONTROL
+
+login.html
+<input type="text" name="phpversion" placeholder="4 (beta), 3 (live) - 1,2 deprecated" id="phpversion" required>
+
+XXinteractions.php
+<head><link href="XXStyle.css" rel="stylesheet" type="text/css"></head>
+<script type="text/javascript" src="XXScript.js"></script>
+
+authenticate.php
+if ($_SESSION['phpversion'] === '1') {header('Location: 01interactions.php');}
+			else {if ($_SESSION['phpversion'] === '2') {header('Location: 02interactions.php');}
+			else {header('Location: 03interactions.php');}}
+

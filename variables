@@ -1,0 +1,35 @@
+$client[0] = $_POST['hbtid']
+
+$client[1] = $_POST['drug1']
+$client[2] = $_POST['drug2']
+$client[3] = $_POST['drug3']
+$client[4] = $_POST['drug4']
+$client[5] = $_POST['drug5']
+$client[6] = $_POST['drug6']
+$client[7] = $_POST['drug7']
+$client[8] = $_POST['drug8']
+$client[9] = $_POST['drug9']
+$client[10] = $_POST['drug10']
+$client[11] = $_POST['drug11']
+$client[12] = $_POST['drug12']
+
+$client[21] = $_POST['disease1']
+$client[22] = $_POST['disease2']
+$client[23] = $_POST['disease3']
+$client[24] = $_POST['disease4']
+$client[25] = $_POST['disease5']
+$client[26] = $_POST['disease6']
+
+$client[40] = 'Active'
+$client[41] = $_POST['sex']
+$client[42] = $_POST['age']
+$client[43] = $_POST['allergies']
+$client[44] = $_POST['exercise']
+$client[45] = $_POST['alcohol']
+$client[46] = $_POST['smoking']
+$client[47] = $_POST['height1']
+$client[48] = $_POST['height2']
+$client[49] = $_POST['weight1']
+$client[50] = $_POST['weight2']
+$client[51] = $bmi
+$client[52] = $history

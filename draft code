@@ -1,0 +1,18 @@
+POPUP WINDOW FOR NOTES
+<p>Add Client notes : <?php echo $_GET['notespopup']; ?> </p>
+        <form><p><input type="text" name="notespopup" />
+        <input type="button" value="check" onClick="window.open('popWindow.php?' + 'notespopup=' + this.form.notespopup.value, '_new')" /></p></form>
+        <form action="popWindow.php" target="_new" method="GET">
+            <p>
+                <input type="text" name="notespopup" />
+                <input type="submit" value="check" />
+            </p>
+        </form>
+
+SECTIONS FOR CLIENT, DRUGS/DISEASES, ETC
+<div class="tab"><button class="tablinks" onclick="openList(event, 'Client')">Client</button>
+    <div class="tab"><button class="tablinks" onclick="openList(event, 'DiseasesDrugs')">Diseases & Drugs</button>
+    <div class="tab"><button class="tablinks" onclick="openList(event, 'LiverRenal')">Liver & Renal</button>
+    <div class="tab"><button class="tablinks" onclick="openList(event, 'PregnancyBreastfeeding')">Pregnancy & Breastfeeding</button>
+    <div class="tab"><button class="tablinks" onclick="openList(event, 'Palliative')">Palliative</button>
+    </div></div></div></div>
