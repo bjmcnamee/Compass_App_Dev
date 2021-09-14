@@ -24,6 +24,3 @@
 
 <b>Disease Tab - basic disease information</b>
 ![Disease Detail Tab](/assets/Screenshots/07.jpg)
-
-<b>Database Design</b>
-![MySQL Database Design](/assets/Screenshots/10.jpg)
