@@ -1,4 +1,4 @@
-# Expert System Database for GPs/Pharmacists
+# Expert System Application Development
 #### - Drug-drug interactions, Drug-disease interactions, Drug-gene interactions and more
 #### - Application built in MySQL/PHP/Javascript/CSS
 #### - Content API/Scraping collection and cleaning via <a href="https://github.com/bjmcnamee/Compass_ETL">Python ETL tools</a>
